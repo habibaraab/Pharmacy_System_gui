@@ -18,7 +18,7 @@ public class OpenPdf {
     if((new File(InventoryUtils.billPath + id + ".pdf")).exists()){
     Process p =Runtime
                 .getRuntime()
-                .exec("rundll32 url.dll,FileProtocolHandler "+InventoryUtils.billPath+""+id+".pdf");
+                .exec("rundll32 url.dll,FileProtocolHandler "+PharmacySystem.billPath+""+id+".pdf");
     }
     else{
     JOptionPane.showMessageDialog(null, "file is not exists");
